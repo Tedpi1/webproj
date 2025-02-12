@@ -1,0 +1,11 @@
+git add .
+git commit -m yourname
+git pull
+git push
+
+
+creating a django projec...
+
+python -m django-admin projectname .
+
+///the fullstop ensure that jus a single directory is created while project creation
