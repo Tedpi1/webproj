@@ -68,3 +68,15 @@ body{
     box-sizing: border-box;
     font-family: 'Oswald', sans-serif;
 }
+
+.authenticate-cont{
+    background-color: var(--bg-black-100);
+    height: 30rem;
+    width: 50rem;
+    margin-left: 27rem;
+    margin-top: 13rem;
+    position: absolute;
+    box-shadow: var(--dark-shadow);
+    border-radius: 10px;
+}
+
