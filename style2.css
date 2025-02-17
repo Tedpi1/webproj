@@ -26,10 +26,11 @@ nav a {
     margin: 10px;
     padding: 10px 15px;
     display: inline-block;
+    
 }
 
 nav a:hover {
-    background-color: #0073e6;
+    background-color: rgb(12, 154, 243);
     border-radius: 5px;
 }
 
@@ -38,7 +39,7 @@ section {
     max-width: 1000px;
     margin: 20px auto;
     padding: 20px;
-    background: peru;
+    background: purple;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
