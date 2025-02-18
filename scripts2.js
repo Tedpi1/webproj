@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Function to change the background color
 function changeBackground() {
-    document.body.style.backgroundColor = "lightblue","black","red";
+    document.body.style.backgroundColor = "lightblue";
 }
 
 // Function to display product details when clicking on a product
@@ -71,3 +71,16 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 })
+const slider = document.querySelector('.slider');
+let index = 0;
+
+function slide() {
+    index++;
+    if (index > 3) {
+        index = 0;
+    }
+    slider.style.transform = `translateX(-${index * 100}%)`;
+}
+
+// Auto-slide every 2 seconds
+setInterval(slide, 2000);
