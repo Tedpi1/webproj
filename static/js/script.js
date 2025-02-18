@@ -66,3 +66,96 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     alert("Thank you, " + name + "! Your message has been sent.");
     document.getElementById("contactForm").reset();
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const lazyImages = document.querySelectorAll('img.lazy');
+
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const image = entry.target;
+                image.src = image.dataset.src;
+                image.classList.remove('lazy');
+                observer.unobserve(image);
+            }
+        });
+    });
+    lazyImages.forEach(image => {
+        imageObserver.observe(image);
+    });
+});
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    var slides = document.querySelectorAll('.slide');
+    var btns = document.querySelectorAll('.radio');
+    let currentSlide = 1;
+
+    // JavaScript for image slider manual navigation
+    var manualNav = function (manual) {
+        slides.forEach((slide) => {
+            slide.classList.remove('active');
+            btns.forEach((btn) => {
+                btn.classList.remove('active');
+            });
+        });
+        slides[manual].classList.add('active');
+        btns[manual].classList.add('active');
+    };
+
+    btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+            manualNav(i);
+            currentSlide = i;
+        });
+    });
+
+    // Image autoplay
+    var repeat = function () {
+        let active = document.getElementsByClassName('active');
+        let i = 1;
+        var repeater = () => {
+            setTimeout(function () {
+                [...active].forEach((activeSlide) => {
+                    activeSlide.classList.remove('active');
+                });
+                slides[i].classList.add('active');
+                btns[i].classList.add('active');
+                i++;
+                if (slides.length === i) {
+                    i = 0;
+                }
+                if (i >= slides.length) {
+                    return;
+                }
+                repeater();
+            }, 10000); // 10 seconds interval
+        };
+        repeater();
+    };
+
+    repeat();
+});
+
+
+var repeat = function () {
+    let active = document.getElementsByClassName('active');
+    var repeater = () => {
+        setTimeout(function () {
+            [...active].forEach((activeSlide) => {
+                activeSlide.classList.remove('active');
+            });
+            slides[currentSlide].classList.add('active');
+            btns[currentSlide].classList.add('active');
+            currentSlide++;
+            if (slides.length === currentSlide) {
+                currentSlide = 0;
+            }
+            repeater();
+        }, 10000); // 10 seconds interval
+    };
+    repeater();
+};
+

@@ -260,6 +260,123 @@ footer {
     padding: 20px;
     width: 100%;
 }
+/* home page */
+.home .home-content{
+    margin-top: 3rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+.home .home-content .home-text{
+    margin-top: 10rem;
+    margin-left: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+}
+.home .home-content .home-text h1{
+    font-size: 3rem;
+    color: #4CAF50;
+    font-weight: 500;
+    line-height: 0;
+}
+.home .home-content .home-text p{
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 500;
+    line-height: 0;
+}
+.home .home-content .image-slider{
+    position: relative;
+    width: 1200px;
+    height: 500px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.home .home-content .image-slider .slide{
+    z-index: 1;
+    position: absolute;
+    clip-path: circle(0% at 0 50%);
+}
+.slide {
+    display: none;
+}
+.slide.active {
+    display: block;
+}
+.home .home-content .image-slider .slide.active{
+    clip-path: circle(150% at 0% 50%);
+    transition: 2s;
+    transition-property: clip-path;
+} 
+.home .home-content .image-slider .slide img{
+    z-index: 1;
+    width: 1580px;
+    height: 500px;
+    border-radius: 5px;
+    box-shadow: var(--light-shadow);
+    object-fit: contain;
+}
+.home .image-slider .slide .slide-info{
+    position: absolute;
+    top: 0;
+    margin-top: 10rem;
+    padding: 10px;
+    margin-left: 25rem;    color: white;
+    border-radius: 5px;
+    box-shadow: var(--light-shadow);
+}
+.home .image-slider .slide .slide-info h1{
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 0;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+.home .image-slider .slide .slide-info h2{
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    font-weight: 300;
+    line-height: 0;
+    margin-left: 5rem;
+}
+.home .image-slider .slide .slide-info a{
+    padding: 20px;
+    margin-top: 15px;
+    margin-left: 5rem;
+    color: white;
+    background-color: black;    
+    border-radius: 15px;
+    box-shadow: var(--light-shadow);
+    margin-top: 10px;
+    position: absolute;
+}
+.home .image-slider .navigation{
+    z-index: 2;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    margin-left: 10rem;
+}
+.home .image-slider .navigation .radio{
+    background: rgba(255,255,255, 0.5);
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.home .image-slider .navigation .radio.active{
+    background: var(--main--color);
+    box-shadow: rgba(0,0,0, 0.5);
+}
+
 
 /* contact page */
 .contact-form {

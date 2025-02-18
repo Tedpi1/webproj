@@ -3,67 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logistics Contact Page</title>
+    <title>Coloshop</title>
     <link rel="stylesheet" href="stylesg.css">
 </head>
 <body>
     <header>
-        <div class="logo">NOVATECH ELECTRONICS</div>
+        <div class="top-bar">
+            <p>FREE SHIPPING ON ALL US ORDERS OVER $50</p>
+            <div class="currency-language">
+                <span>USD</span>
+                <span>English</span>
+                <span>My Account</span>
+            </div>
+        </div>
+        <div class="logo">
+            <h1>COLOSHOP</h1>
+        </div>
         <nav>
             <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact2.html">Contact Us</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Promotion</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
-
-    <section class="hero">
-        <h1>Contact <span>Us</span></h1>
-    </section>
-
-    <section class="contact-form">
-        <h2>Get In <span>Touch</span></h2>
-        <p>For any product's speciication you did not understand</p>
-        <form id="contactForm">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <input type="text" id="subject" placeholder="Your Subject" required>
-            <textarea id="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
-
-    <section class="services">
-        <h2>Consult the services you <span>need now!</span></h2>
-        <div class="service-list">
-            <div>✔ Fast delivery</div>
-            <div>✔ Competitive Price</div>
-            <div>✔ Wide Delivery Area</div>
-        </div>
-        <button class="contact-btn">Contact Us</button>
-    </section>
-
-    <section class="offices">
-        <h2>Our Offices <span>Located</span> All Over The Country</h2>
-        <div class="office-info">
-            <div class="office">
-                <h3>Nairobi</h3>
-                <p>Address: 123 Karen ,Kenya </p>
-                <p>Phone: +254744355964</p>
-                <p>Email: info@novatechelectronics.com</p>
+    <main>
+        <section class="promo-banner">
+            <h2>SPRING / SUMMER COLLECTION 2017</h2>
+            <h1>Get up to 30% Off New Arrivals</h1>
+            <button>Shop Now</button>
+        </section>
+        <section class="categories">
+            <div class="category">
+                <img src="womens.jpg" alt="Women's">
+                <h3>WOMEN'S</h3>
             </div>
-            <div class="office">
-                <h3>Embu</h3>
-                <p>Address:60-100,Kenya</p>
-                <p>Phone:+254766990844 </p>
-                <p>Email: info@novatechelectronics.com</p>
+            <div class="category">
+                <img src="accessories.jpg" alt="Accessories">
+                <h3>ACCESSORIES</h3>
             </div>
-        </div>
-    </section>
-
-   
-
-    <script src="script.js"></script>
+        </section>
+        <section class="products">
+            <div class="product-list">
+                <div class="product">
+                    <img src="product1.jpg" alt="Product 1">
+                    <p>Product 1</p>
+                    <p>$50.00</p>
+                </div>
+                <div class="product">
+                    <img src="product2.jpg" alt="Product 2">
+                    <p>Product 2</p>
+                    <p>$60.00</p>
+                </div>
+                <!-- Add more products as needed -->
+            </div>
+            <div class="deal-of-the-week">
+                <h3>Deal Of The Week</h3>
+                <div class="countdown">
+                    <span>2</span>
+                    <span>21</span>
+                    <span>22</span>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>

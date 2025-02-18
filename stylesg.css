@@ -2,53 +2,111 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #0a0a0a;
-    padding: 15px 50px;
+.top-bar {
+    background-color: #000;
     color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.currency-language {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
 }
 
 nav ul {
+    display: flex;
+    justify-content: center;
     list-style: none;
+    padding: 0;
+    background-color: #f8f8f8;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.promo-banner {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f2f2f2;
+}
+
+.promo-banner h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #888;
+}
+
+.promo-banner h1 {
+    margin: 10px 0;
+    font-size: 36px;
+    color: #000;
+}
+
+.promo-banner button {
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.category {
+    text-align: center;
+}
+
+.products {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.product-list {
     display: flex;
     gap: 20px;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 15px;
-    transition: 0.3s;
-}
-
-nav a:hover, .contact-btn {
-    background: orange;
-    border-radius: 5px;
-}
-
-.hero {
-    background: url('your-image.jpg') no-repeat center center/cover;
-    color: white;
+.product {
     text-align: center;
-    padding: 100px 20px;
-    font-size: 36px;
 }
 
-
-footer {
-    background: #0a0a0a;
-    color: white;
+.deal-of-the-week {
     text-align: center;
+    background-color: #f8f8f8;
     padding: 20px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.countdown span {
+    font-size: 24px;
+    background-color: #ff0000;
+    color: #fff;
+    padding: 10px;
 }
