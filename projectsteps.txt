@@ -3,8 +3,12 @@ git commit -m yourname
 git pull
 git push
 
+//create a virtual environment
 
-creating a django projec...
+py -m venv .env
+
+
+//creating a django projec...
 
 python -m django-admin projectname .
 

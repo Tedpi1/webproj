@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+<title>Home</title>
+{% endblock title %}
+{% block content %}
+
+<section class="home">
+    <div class="home-content">
+        <div class="image-slider ">
+            <div class="slide active">
+                <img src="{% static 'images/5.avif' %}" alt="image1">
+                <div class="slide-info">
+                    <h2>Women's Fashion 2024  </h2>
+                    <h1>new arrivals</h1>
+                    <a href="">Shopping</a>
+                </div>
+            </div>
+            <div class="slide ">
+                <img src="{% static 'images/3.jpeg' %}" alt="image1">
+                <div class="slide-info">
+                    <h2>Men's Fashion 2024  </h2>
+                    <h1>new arrivals</h1>
+                    <a href="">Shopping</a>
+                </div>
+            </div>
+            <div class="slide ">
+                <img src="{% static 'images/4.jpeg' %}" alt="image1">
+                <div class="slide-info">
+                    <h2>Children's Fashion 2024  </h2>
+                    <h1>new arrivals</h1>
+                    <a href="">Shopping</a>
+                </div>
+            </div>
+            <div class="navigation" >
+                <div class="radio active"></div>
+                <div class="radio"></div>
+                <div class="radio"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock content %}
