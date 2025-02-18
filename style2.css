@@ -210,4 +210,80 @@ category-item {
 .category-item:hover {
     background-color: #0056b3;
 }
+.social-icons a {
+    margin: 10px;
+    display: inline-block;
+}
 
+.social-icons img {
+    width: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+.subscribe-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Space between input and button */
+    background: #f8f8f8; /* Light background */
+    padding: 10px;
+    border-radius: 8px; /* Rounded corners */
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Field */
+.subscribe-form input {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border 0.3s ease;
+}
+/* Input Field Focus Effect */
+.subscribe-form input:focus {
+    border-color: red;
+}
+
+/* Subscribe Button */
+.subscribe-form button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover & Click Effects */
+.subscribe-form button:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+}
+
+.subscribe-form button:active {
+    transform: scale(1);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .subscribe-form {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .subscribe-form input {
+        width: 100%;
+    }
+
+    .subscribe-form button {
+        width: 100%;
+    }
