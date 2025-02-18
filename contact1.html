@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legalia Contact Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: white;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: black;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .active {
+            background-color: red;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .contact {
+            margin-top: 50px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input, textarea {
+            width: 80%;
+            max-width: 500px;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        button {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">LEGALIA</div>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SERVICES AREAS</a></li>
+                <li><a href="#" class="active">OUR TEAM</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="contact">
+        <h1>GET IN TOUCH</h1>
+        <p><strong>Phone:</strong> +2 (02) 2737 6756</p>
+        <p><strong>Email:</strong> <a href="mailto:hamdy.mostafa@legaliacorp.com">hamdy.mostafa@legaliacorp.com</a></p>
+        <p><strong>Address:</strong> 18 Mahmoud Azmy Street, off 26th July Street, Zamalek, Cairo, Egypt.</p>
+        
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name *" required>
+            <input type="email" id="email" placeholder="Your Email *" required>
+            <input type="tel" id="phone" placeholder="Your Phone *" required>
+            <textarea id="message" placeholder="Your Message *" required></textarea>
+            <button type="submit">SEND MESSAGE</button>
+        </form>
+    </section>
+    
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Message sent successfully!");
+        });
+    </script>
+</body>
+</html>
