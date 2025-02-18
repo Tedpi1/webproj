@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Function to change the background color
 function changeBackground() {
-    document.body.style.backgroundColor = "lightblue";
+    document.body.style.backgroundColor = "lightblue","black","red";
 }
 
 // Function to display product details when clicking on a product
