@@ -287,3 +287,34 @@ category-item {
     .subscribe-form button {
         width: 100%;
     }
+    .slider-container {
+        width: 60%;
+        overflow: hidden;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        position: relative;
+    }
+    
+    .slider {
+        display: flex;
+        width: 400%;
+        animation: slideAnimation 8s infinite linear;
+    }
+    
+    .slide {
+        min-width: 100%;
+    }
+    
+    .slide img {
+        width: 100%;
+        display:table-row;
+    }
+    
+    /* Keyframes for sliding animation */
+    @keyframes slideAnimation {
+        0% { transform: translateX(0%); }
+        25% { transform: translateX(-100%); }
+        50% { transform: translateX(-200%); }
+        75% { transform: translateX(-300%); }
+        100% { transform: translateX(0%); }
+    }
