@@ -274,7 +274,7 @@ category-item {
 }
 
 /* Responsive Design */
-@media (max-width: 480px) {
+@media (max-width: 480px) {}
     .subscribe-form {
         flex-direction: column;
         gap: 5px;
