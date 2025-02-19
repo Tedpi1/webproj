@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="authenticate-cont">
+    <div class="row">
+        <div class="content-box">
+            <div class="form-container">
+                <h1>Registration Form</h1>
+                <form id="registrationForm">
+
+        
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                    <span class="error" id="emailError"></span>
+        
+                    <input type="password" name="password" id="password" placeholder="Enter your password" required>
+                    <span class="error" id="passwordError"></span>
+        
+                    <button type="submit">Login</button>
+                    
+                </form>
+                <h3 class="login">Don't Have An Acount ? <a href="">Register</a></h3>
+            </div>
+        </div>
+        
+        <div class="content-image">
+            <div class="nova-logo">
+                <span class="n">N</span>
+                <span class="o">O</span>
+                <span class="v">V</span>
+                <span class="a">A</span>
+                <span class="electronics">Electronics</span>
+            </div>
+        </div>
+        
+    </div>
+
+</div>
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock content %}
