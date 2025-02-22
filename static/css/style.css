@@ -38,7 +38,7 @@
     --clr-green-dark: hsl(125, 67%, 44%);
     --clr-green-light: hsl(125, 71%, 66%);
     --main--color: #4CAF50;
-    --commerce--color: #ffcc00;
+    --commerce--color: #ff6600;
     --clr-black: #222;
     --ff-primary: "Roboto", sans-serif;
     --ff-secondary: "Open Sans", sans-serif;
@@ -284,8 +284,9 @@ footer {
 /* home page */
 .home{
     margin-top: 5rem;
-    margin-left: 10rem;
+    
 }
+
 .collection-card{
     margin: 0;
     padding: 0;
@@ -294,6 +295,7 @@ footer {
     display: flex;
     gap: 2rem ;
     flex-wrap: wrap;
+    margin-left: 10rem;
 }
 
 .card {
@@ -349,7 +351,7 @@ footer {
 
 .home-content{
     display: flex;
-    
+    margin-left: 10rem;
     flex-direction: column;
     margin-top: 5rem;
 }
@@ -374,7 +376,31 @@ footer {
 .product-container{
     display: flex; 
     margin-bottom: 5rem;
+    gap: 5rem;
 
+}
+.product-card:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+}
+.add-to-cart {
+    position: absolute;
+    bottom: -50px; /* Initially hidden below the card */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0;
+    transition: bottom 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.product-card:hover .add-to-cart {
+    bottom: 10px; /* Moves up into view */
+    opacity: 1; /* Becomes visible */
 }
 
 /* Card Container */
@@ -468,6 +494,55 @@ footer {
     color: red;
 }
 
+.countdown-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.countdown {
+    display: flex;
+    gap: 15px;
+    display: inline-flex;
+}
+.time-box {
+    background: red;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+}
+.deal-text {
+    flex: 1;
+}
+.deal-text h2 {
+    margin: 10px 0;
+    color: #333;
+}
+.shop-now {
+    background: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+
+    margin-top: 1rem;
+
+}
+
+
 /* contact page */
 .contact-form {
     text-align: center;
@@ -534,3 +609,5 @@ footer {
     padding: 20px;
     border-radius: 5px;
 }
+
+
