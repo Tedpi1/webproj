@@ -104,5 +104,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // ✅ Start the countdown: 2 days, 10 hours, 34 minutes, 60 seconds
-    startCountdown(2 * 24 * 3600 + 10 * 3600 + 34 * 60 + 60);
+    startCountdown(10 * 24 * 3600);
 });
