@@ -2,11 +2,10 @@
     <div class="logo">NOVATECH ELECTRONICS</div>
     <nav>
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#" class="contact-btn">Contact Us</a></li>
+            <li><a href="{% url 'nova:home' %}">Home</a></li>
+            <li><a href="{% url 'nova:about' %}">About Us</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="{% url 'nova:contact' %}">Contact</a></li>
         </ul>
     </nav>
 </header>
