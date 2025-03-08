@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>About Us - Logistics</title>
+{% endblock title %}
+
+{% block content %}
+    <div class="about-section">
+        <img src="{% static 'images/14.jpg' %}" alt="About Us Background">
+        <div class="about-header">
+            <div class="breadcrumb">
+                <a href="{% url 'nova:home' %}">HOME</a> &gt; <span>ABOUT US</span>
+            </div>
+            <h1>About Us</h1>
+        </div>
+        <div class="services">
+            {% comment %} different customer support awarderd {% endcomment %}
+            <div class="customer-service">
+                <i class="fas fa-headset"></i>
+                <div class="text">
+                    <h1>CUSTOMER SUPPORT 24/7</h1>
+                    <p>
+                        We are always available to help you <br> with any queries you may have. Our <br>    customer support team is available 24/7 to assist you.
+                    </p>
+                </div>
+            </div>
+            {% comment %} different customer support awarderd {% endcomment %}
+            <div class="customer-service">
+                <i class="fas fa-dollar-sign"></i> 
+                <div class="text">
+                    <h1>100% MONEY BACK GUARANTEE</h1>
+                    <p>
+                        Shop with confidence! If you're not satisfied, we offer a hassle-free refund.  
+                        Our 24/7 support team is always here to assist you.
+                    </p>
+                </div>
+            </div>
+            
+
+            {% comment %} different customer support awarderd {% endcomment %}
+            <div class="customer-service">
+                <i class="fas fa-truck"></i>
+                <div class="text">
+                    <h1>FREE SHIPPING AND REUTRN</h1>
+                    <p>
+                        Enjoy hassle-free shopping with our complimentary shipping on all orders. <br>  
+                        If you're not completely satisfied, return your items for free—no questions asked! <br>  
+                        Shop with confidence, knowing we've got you covered.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock content %}
