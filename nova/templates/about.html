@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+
 {% block title %}
 <title>About Us - Logistics</title>
 {% endblock title %}
@@ -13,43 +14,46 @@
             </div>
             <h1>About Us</h1>
         </div>
+
         <div class="services">
-            {% comment %} different customer support awarderd {% endcomment %}
             <div class="customer-service">
                 <i class="fas fa-headset"></i>
                 <div class="text">
                     <h1>CUSTOMER SUPPORT 24/7</h1>
-                    <p>
-                        We are always available to help you <br> with any queries you may have. Our <br>    customer support team is available 24/7 to assist you.
-                    </p>
+                    <p>We are always available to help you. Our support team is available 24/7.</p>
                 </div>
             </div>
-            {% comment %} different customer support awarderd {% endcomment %}
+
             <div class="customer-service">
-                <i class="fas fa-dollar-sign"></i> 
+                <i class="fas fa-dollar-sign"></i>
                 <div class="text">
                     <h1>100% MONEY BACK GUARANTEE</h1>
-                    <p>
-                        Shop with confidence! If you're not satisfied, we offer a hassle-free refund.  
-                        Our 24/7 support team is always here to assist you.
-                    </p>
+                    <p>Not satisfied? Get a hassle-free refund. Support available 24/7!</p>
                 </div>
             </div>
-            
 
-            {% comment %} different customer support awarderd {% endcomment %}
             <div class="customer-service">
                 <i class="fas fa-truck"></i>
                 <div class="text">
-                    <h1>FREE SHIPPING AND REUTRN</h1>
-                    <p>
-                        Enjoy hassle-free shopping with our complimentary shipping on all orders. <br>  
-                        If you're not completely satisfied, return your items for free—no questions asked! <br>  
-                        Shop with confidence, knowing we've got you covered.
-                    </p>
+                    <h1>FREE SHIPPING & RETURNS</h1>
+                    <p>Enjoy free shipping on all orders and hassle-free returns—no questions asked!</p>
                 </div>
             </div>
         </div>
+
+        <!-- Team Section -->
+        <div class="team-container">
+            {% comment %} <h2>Meet Our Team</h2>
+            <div class="team-member">
+                <img src="{% static 'images/1.jpg' %}" alt="Jane Sasha">
+                <h3>Jane Sasha</h3>
+                <p class="role">Founder</p>
+                <p>Jane, our visionary leader, pioneered our work on diodes.</p>
+                <p>She is highly recognized in the company—feel free to consult her for more insights on diodes.</p>
+            </div> {% endcomment %}
+            
+        </div>
     </div>
-<script src="{% static 'js/script.js' %}"></script>
+
+    <script src="{% static 'js/script.js' %}"></script>
 {% endblock content %}

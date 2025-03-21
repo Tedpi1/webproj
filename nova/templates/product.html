@@ -1,0 +1,301 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+<title>Product</title>
+{% endblock title %}
+{% block content %}
+
+<section class="product">
+    {% comment %} category cards {% endcomment %}
+    <div class="collection-card">
+        <div class="card">
+            <img src="{% static 'images/2.jpeg' %}" alt="phone">
+            <div class="overlay">
+                <h2>Laptop Collection</h2>
+                <a href="#">SHOP NOW ➜</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'images/7.jpg' %}" alt="phone">
+            <div class="overlay">
+                <h2>Laptop Collection</h2>
+                <a href="#">SHOP NOW ➜</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="{% static 'images/6.jpg' %}" alt="phone">
+            <div class="overlay">
+                <h2>Laptop Collection</h2>
+                <a href="#">SHOP NOW ➜</a>
+            </div>
+        </div>
+    </div>
+    <div class="product-content">
+        <div class="product-header">
+            <h1>New Products</h1>
+            <div class="category-link">
+                <a href="#" class="active">Laptops</a>
+
+                <a href="">Smartphones</a>
+                <a href="">Cameras</a>
+                <a href="">Accessories</a>
+            </div>
+            
+        </div>
+        <div class="product-container">
+            <div class="product-card">
+                <div class="badge">NEW</div>
+                <div class="product-image">
+                    <img src="{% static 'images/2.jpeg' %}" alt="phone">
+                </div>
+                <div class="product-info">
+                    <p class="category">CATEGORY</p>
+                    <h2 class="product-name">PRODUCT NAME GOES HERE</h2>
+                    <p class="price">
+                        <span class="new-price">$980.00</span>
+                        <span class="old-price">$999.00</span>
+                    </p>
+                    <div class="rating">
+                        <span class="star checked">&#9733;</span>
+                        <span class="star checked">&#9733;</span>
+                        <span class="star checked">&#9733;</span>
+                        <span class="star checked">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                    <div class="product-actions">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-eye"></i>
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="badge">NEW</div>
+                <div class="product-image">
+                    <img src="{% static 'images/2.jpeg' %}" alt="phone">
+                </div>
+                <div class="product-info">
+                    <p class="category">CATEGORY</p>
+                    <h2 class="product-name">PRODUCT NAME GOES HERE</h2>
+                    <p class="price">
+                        <span class="new-price">$980.00</span>
+                        <span class="old-price">$999.00</span>
+                    </p>
+                    <div class="rating">
+                        <span class="star checked">&#9733;</span>
+                        <span class="star checked">&#9733;</span>
+                        <span class="star checked">&#9733;</span>
+                        <span class="star checked">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                    <div class="product-actions">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-eye"></i>
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+
+            <div class="product-card">
+                <div class="badge">NEW</div>
+                <div class="product-image">
+                    <img src="{% static 'images/11.jpg' %}" alt="phone">
+                </div>
+                <div class="product-info">
+                    <p class="category">CATEGORY</p>
+                    <h2 class="product-name">PRODUCT NAME GOES HERE</h2>
+                    <p class="price">
+                        <span class="new-price">$980.00</span>
+                        <span class="old-price">$999.00</span>
+                    </p>
+                    <div class="rating">
+                        <span class="star checked">&#9733;</span>
+                        <span class="star checked">&#9733;</span>
+                        <span class="star checked">&#9733;</span>
+                        <span class="star checked">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                    <div class="product-actions">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-eye"></i>
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+
+            <div class="product-card">
+                <div class="badge">NEW</div>
+                <div class="product-image">
+                    <img src="{% static 'images/10.jpg' %}" alt="phone">
+                </div>
+                <div class="product-info">
+                    <p class="category">CATEGORY</p>
+                    <h2 class="product-name">PRODUCT NAME GOES HERE</h2>
+                    <p class="price">
+                        <span class="new-price">$980.00</span>
+                        <span class="old-price">$999.00</span>
+                    </p>
+                    <div class="rating">
+                        <span class="star checked">&#9733;</span>
+                        <span class="star checked">&#9733;</span>
+                        <span class="star checked">&#9733;</span>
+                        <span class="star checked">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                    <div class="product-actions">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-eye"></i>
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+
+            <div class="product-card">
+                <div class="badge">NEW</div>
+                <div class="product-image">
+                    <img src="{% static 'images/9.jpg' %}" alt="phone">
+                </div>
+                <div class="product-info">
+                    <p class="category">CATEGORY</p>
+                    <h2 class="product-name">PRODUCT NAME GOES HERE</h2>
+                    <p class="price">
+                        <span class="new-price">$980.00</span>
+                        <span class="old-price">$999.00</span>
+                    </p>
+                    <div class="rating">
+                        <span class="star checked">&#9733;</span>
+                        <span class="star checked">&#9733;</span>
+                        <span class="star checked">&#9733;</span>
+                        <span class="star checked">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                    <div class="product-actions">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-eye"></i>
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+
+            <div class="product-card">
+                <div class="badge">NEW</div>
+                <div class="product-image">
+                    <img src="{% static 'images/8.jpg' %}" alt="phone">
+                </div>
+                <div class="product-info">
+                    <p class="category">CATEGORY</p>
+                    <h2 class="product-name">PRODUCT NAME GOES HERE</h2>
+                    <p class="price">
+                        <span class="new-price">$980.00</span>
+                        <span class="old-price">$999.00</span>
+                    </p>
+                    <div class="rating">
+                        <span class="star checked">&#9733;</span>
+                        <span class="star checked">&#9733;</span>
+                        <span class="star checked">&#9733;</span>
+                        <span class="star checked">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                    <div class="product-actions">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-eye"></i>
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+
+            <div class="product-card">
+                <div class="badge">NEW</div>
+                <div class="product-image">
+                    <img src="{% static 'images/5.avif' %}" alt="phone">
+                </div>
+                <div class="product-info">
+                    <p class="category">CATEGORY</p>
+                    <h2 class="product-name">PRODUCT NAME GOES HERE</h2>
+                    <p class="price">
+                        <span class="new-price">$980.00</span>
+                        <span class="old-price">$999.00</span>
+                    </p>
+                    <div class="rating">
+                        <span class="star checked">&#9733;</span>
+                        <span class="star checked">&#9733;</span>
+                        <span class="star checked">&#9733;</span>
+                        <span class="star checked">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                    <div class="product-actions">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-eye"></i>
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+
+
+            <div class="product-card">
+                <div class="badge">NEW</div>
+                <div class="product-image">
+                    <img src="{% static 'images/7.jpg' %}" alt="phone">
+                </div>
+                <div class="product-info">
+                    <p class="category">CATEGORY</p>
+                    <h2 class="product-name">PRODUCT NAME GOES HERE</h2>
+                    <p class="price">
+                        <span class="new-price">$980.00</span>
+                        <span class="old-price">$999.00</span>
+                    </p>
+                    <div class="rating">
+                        <span class="star checked">&#9733;</span>
+                        <span class="star checked">&#9733;</span>
+                        <span class="star checked">&#9733;</span>
+                        <span class="star checked">&#9733;</span>
+                        <span class="star">&#9733;</span>
+                    </div>
+                    <div class="product-actions">
+                        <i class="fas fa-heart"></i>
+                        <i class="fas fa-eye"></i>
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+            
+        </div>
+
+       
+    </div>
+    <div class="countdown-card">
+        <img src="{% static 'images/2.jpeg' %}" alt="phone" width="300">
+        <div class="deal-text">
+            <div class="countdown">
+                <div class="time-box" id="days">00</div>
+                <div class="time-box" id="hours">00</div>
+                <div class="time-box" id="minutes">00</div>
+                <div class="time-box" id="seconds">00</div>
+            </div>
+            <h2>HOT DEAL THIS WEEK</h2>
+            <p>NEW COLLECTION UP TO 50% OFF</p>
+            <a href="#" class="shop-now">SHOP NOW</a>
+        </div>
+        <img src="{% static 'images/2.jpeg' %}" alt="phone" width="300">
+    </div>
+    
+</section>
+
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock content %}

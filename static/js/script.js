@@ -1,29 +1,31 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // FORM VALIDATION - REGISTRATION
+    // ✅ FORM VALIDATION - REGISTRATION
     let registrationForm = document.getElementById("registrationForm");
     if (registrationForm) {
-        registrationForm.addEventListener("submit", function(event) {
+        registrationForm.addEventListener("submit", function (event) {
             event.preventDefault();
             alert("Form submitted successfully!");
         });
     }
 
-    // FORM VALIDATION - CONTACT
+    // ✅ FORM VALIDATION - CONTACT
     let contactForm = document.getElementById("contactForm");
     if (contactForm) {
-        contactForm.addEventListener("submit", function(event) {
+        contactForm.addEventListener("submit", function (event) {
             event.preventDefault();
             alert("Thank you for contacting us!");
         });
     }
 
-    // TOGGLE ACTIVE LINKS
+    // ✅ TOGGLE ACTIVE LINKS
     const navLinks = document.querySelectorAll(".category-link a");
     if (navLinks.length > 0) {
         navLinks.forEach(link => {
             link.addEventListener("click", function (event) {
-                event.preventDefault();
-                
+                if (this.getAttribute("href") === "#") {
+                    event.preventDefault(); // Prevent only if href="#"
+                }
+
                 // Remove active class from all links
                 navLinks.forEach(l => l.classList.remove("active"));
 
@@ -33,44 +35,37 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // SLIDE FUNCTION ON ITEMS
+    // ✅ SLIDE FUNCTION ON ITEMS
     const container = document.querySelector(".product-container");
     const cards = document.querySelectorAll(".product-card");
     let index = 0;
     const visibleCount = 4; // Number of visible cards
-    let slideInterval; // Variable to store interval reference
+    let slideInterval;
 
     if (container && cards.length > 0) {
         function updateVisibility() {
             cards.forEach((card, i) => {
-                if (i >= index && i < index + visibleCount) {
-                    card.style.display = "block"; // Show the card
-                } else {
-                    card.style.display = "none"; // Hide the card
-                }
+                card.style.display = i >= index && i < index + visibleCount ? "block" : "none";
             });
         }
 
         function slideLeft() {
-            index++;
-            if (index > cards.length - visibleCount) {
-                index = 0; // Reset to start when reaching the end
-            }
+            index = (index + 1) % (cards.length - visibleCount + 1); // Loop back
             updateVisibility();
         }
 
         function startSlideShow() {
-            slideInterval = setInterval(slideLeft, 3000); // Start automatic sliding
+            slideInterval = setInterval(slideLeft, 3000);
         }
 
         function stopSlideShow() {
-            clearInterval(slideInterval); // Stop sliding
+            clearInterval(slideInterval);
         }
 
-        updateVisibility(); // Initialize the first view
-        startSlideShow(); // Start sliding initially
+        updateVisibility();
+        startSlideShow();
 
-        // Pause the slide when hovering over any card
+        // Pause when hovering over a card
         cards.forEach(card => {
             card.addEventListener("mouseenter", stopSlideShow);
             card.addEventListener("mouseleave", startSlideShow);
@@ -80,9 +75,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // ✅ FIXED COUNTDOWN FUNCTION
     function startCountdown(durationInSeconds) {
         function updateCountdown() {
-            if (durationInSeconds <= 0) {
+            let daysEl = document.getElementById("days");
+            let hoursEl = document.getElementById("hours");
+            let minutesEl = document.getElementById("minutes");
+            let secondsEl = document.getElementById("seconds");
+
+            if (!daysEl || !hoursEl || !minutesEl || !secondsEl) {
                 clearInterval(countdownInterval);
-                return; // Stop when countdown reaches 0
+                return;
             }
 
             let days = Math.floor(durationInSeconds / (3600 * 24));
@@ -90,19 +90,21 @@ document.addEventListener("DOMContentLoaded", function () {
             let minutes = Math.floor((durationInSeconds % 3600) / 60);
             let seconds = durationInSeconds % 60;
 
-            document.getElementById("days").innerText = days.toString().padStart(2, '0');
-            document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
-            document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
-            document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+            daysEl.innerText = days.toString().padStart(2, '0');
+            hoursEl.innerText = hours.toString().padStart(2, '0');
+            minutesEl.innerText = minutes.toString().padStart(2, '0');
+            secondsEl.innerText = seconds.toString().padStart(2, '0');
 
-            durationInSeconds--; // Decrease time by 1 second
+            durationInSeconds--;
         }
 
-        // Run every second
-        updateCountdown(); // Run immediately so the UI updates instantly
+        updateCountdown();
         let countdownInterval = setInterval(updateCountdown, 1000);
     }
 
-    // ✅ Start the countdown: 2 days, 10 hours, 34 minutes, 60 seconds
-    startCountdown(10 * 24 * 3600);
+    // ✅ Start the countdown (2 days, 10 hours, 34 minutes, 60 seconds)
+    startCountdown(2 * 24 * 3600 + 10 * 3600 + 34 * 60 + 60);
+
+    // ✅ MEET OUR TEAM JS SCROLL
+    
 });

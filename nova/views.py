@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.contrib.auth import authenticate, login, logout
 
 
 def signup(request):
@@ -11,6 +12,10 @@ def login(request):
 
 def contact(request):
     return render(request, "contact.html")
+
+
+def product(request):
+    return render(request, "product.html")
 
 
 def home(request):
